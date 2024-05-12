@@ -1,0 +1,34 @@
+Git Branching & Merging
+
+To check the current branch do git branch
+
+To create and switch to new branch do git checkout -b Sk_test
+
+If we edit the file in new branch and did git add and git commit from visual studio and then switch the branch. We can see that the new
+changes are not in main branch but will be available in new branch (Sk_test).
+
+If we want to merge both the branches :
+
+	First check what is the difference between both the branches. If we are in main branch and want to check with new branch (Sk_test) 
+	do git diff Sk_test
+
+	Since the new branch have additional content will be shown as - (-ve showing that the current branch have contents missing). Assume if the content 	is less it will be shown as +(+ve showing that the current branch have more contents)
+
+	Now do git push the changes to new branch (Sk_test) by doing git push -u origin Sk_test
+
+	After the push in the GitHub (web) you see a message saying there is a push from another branch (currently you are in main branch) and
+	would like to “Compare & pull request”
+
+	Select the option. It will show the option of where to where the branch is getting merged. (Here it is Sk_test to master). Leave a comment.
+ 
+	
+	Once the reviewer approves it do Merge pull request
+
+	But in the visual studio you won’t see the changes merged as the changes are done in GitHub web. Do a git pull to reflect the changes
+	in main branch.
+
+
+Delete a branch:
+
+To delete a branch do git branch -d Sk_test. Do git branch to verify and you see only main branch present.
+
